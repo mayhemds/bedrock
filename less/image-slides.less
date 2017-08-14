@@ -1,0 +1,113 @@
+
+/*
+Note: need to build set of different images masks
+*/
+/* Image Masking */
+.img-mask {
+	.rounded(360px);
+	padding: 10px;
+}
+
+
+/* ----------------------------------------
+ SLIDING EFFECTS
+ ---------------------------------------- */
+
+.slide {
+	position:relative;
+	/* Set the width and the height according to the size of your pictures */
+	width:350px;
+	height:150px;
+	overflow:hidden;
+	.left;
+	margin-right: 10px;
+	background: @black;
+	padding: 0;
+	display: block;
+	/* Paragraphs and Heading 2 styling, change according to your needs*/
+	p, h5 {
+	color:@white;
+	padding: 0px 5px;
+	}
+	p {
+	.font-size(14);
+	line-height: 16px;
+	}
+	h5 {
+	.font-size(18);
+	line-height: 22px;
+	}
+}
+
+
+/* 1. Sliding Up */
+
+/* Just add slide-up  class for it to slide up */
+
+.slide-up img {
+	position:absolute;
+	left:0;
+	top:0;
+	.transition(top, 0.8s, ease-in-out);
+	&.top:hover {
+		top:-200px;
+		padding-bottom:200px;
+	}
+}
+
+/* 2. Sliding Down */
+
+/*  Just add the slide-down class for it to slide down*/
+
+.slide-down img {
+	position:absolute;
+	left:0;
+	bottom:0;
+	.transition(bottom, 0.8s, ease-in-out);
+	&.top:hover {
+		bottom:-200px;
+		padding-top:200px;
+	}
+}
+
+
+/* ----------------------------------------
+	5. FULL OVERLAY
+---------------------------------------- */
+
+
+
+.full_overlay {
+	position:relative;
+	/* Set the width and the height according to the size of your pictures */
+	width:100%;
+	height:100%;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	p {
+	color:@white;
+	//padding:10px;
+	.font-size(14);
+	line-height: 1.2;
+	}
+	.content {
+		position: absolute;
+		/* Set the width and the height according to the size of your pictures */
+		width: 100%;
+		height:100%;
+		.opacity(0); /* Set a 0 opacity to hide the content */
+		/* Semi-transparent background for modern browsers, black for older browsers */
+		background:@black;
+		background: rgba(0,0,0,0.8);
+		.transition(opacity, 0.6s, ease-in-out); /* CSS3 transitions, creates the fading effect */
+		h5, p {
+		padding:0 10px;
+		color:@white;
+		}
+		&:hover {
+		.opacity(100);	/* Setting a 100% opacity on mouse hover to show the content */
+		}
+	}
+
+}

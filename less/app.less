@@ -1,0 +1,136 @@
+html { font-size: @root-font-size; }
+
+html, body { padding: 0; margin: 0; height: 100%};
+
+body {
+  background: @base-background-color;
+  color: @base-text-color;
+  .font-size();
+  font-family: @custom-font-family;
+  font-weight: @base-font-weight;
+  font-style: @base-font-style;
+  .antialiased;
+  cursor: default;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: @heading-color;
+  font-family: @custom-font-family;
+  font-weight: @heading-font-weight;
+  line-height: @heading-line-height;
+  margin-bottom: @heading-margin-bottom;
+
+}
+
+h1 {
+  .font-size(36);
+  @media screen and (max-width: 60em) {
+    .font-size(28);
+  }
+};/* h1 set at 36px */
+h2 {
+  .font-size(30);
+  @media screen and (max-width: 60em) {
+    .font-size(24);
+  }
+};/* h2 set at 30px */
+h3 {
+  .font-size(28);
+  @media screen and (max-width: 60em) {
+    .font-size(20);
+  }
+};/* h3 set at 26px */
+h4 {
+  .font-size(22);
+  @media screen and (max-width: 60em) {
+    .font-size(18);
+  }
+};/* h4 set at 22px */
+h5 {
+  .font-size(18);
+  @media screen and (max-width: 60em) {
+    .font-size(16);
+  }
+};/* h5 set at 18px */
+h6 {
+  .font-size(16);
+  @media screen and (max-width: 60em) {
+    .font-size(14);
+  }
+};/* h6 set at 16px */
+
+
+
+.sub-heading {
+  color: @sub-heading-color;
+  font-weight: @sub-heading-weight;
+  .antialiased;
+}
+
+p {
+  .font-size(18);
+  line-height: @paragraph-line-height;
+  @media screen and (max-width: 60em) {
+    .font-size();
+  }
+}
+
+a {
+  text-decoration: @link-text-decoration;
+  color: @link-color;
+    &:hover {
+    cursor: pointer;
+    color: @link-color-hover;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: inline;
+  vertical-align: middle;
+  -ms-interpolation-mode: bicubic;
+}
+
+#map_canvas img,
+#map_canvas embed,
+#map_canvas object,
+.map_canvas img,
+.map_canvas embed,
+.map_canvas object {
+  max-width: none !important; }
+
+  hr {
+    color: @black-10;
+    margin: 2.5;
+    border: 1px solid;
+
+  }
+
+textarea {
+  height: auto;
+  min-height: 70px; }
+
+select {
+  width: 100%; }
+
+/* Begin your masterpiece! */
+
+form {
+  label {
+    .font-size(16);
+    input {
+     .font-size;
+     padding: 20px 0;
+    }
+  }
+}
+ video {
+   background: @black;
+ }
+
+.highlight {
+  color: @white;
+  padding: 2px;
+  background: DeepSkyBlue;
+}

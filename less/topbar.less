@@ -1,0 +1,62 @@
+
+.topbar {
+	background: @black-90;
+	min-height: 70px ;
+	.clearfix;
+	// logo
+	.title {
+		padding: 10px 5px;
+		display: block;
+		.left;
+	}
+	// Toggle icon
+	.toggle-icon {
+		background: url('../img/toggle.png') no-repeat;
+		background-position: right 5% top 10%;
+		padding: 20px 0;
+		margin: 15px 0;
+		cursor: pointer;
+	}
+	// Basic minimal Styling to build on
+	.navbar {
+		list-style: none;
+		li {
+		border-bottom: 1px solid darken(@brand-color-one, 10%);
+
+			a {
+			color: @white;
+			display: block;
+			padding: 10px 5px;
+			background: @brand-color-one;
+				&:hover {
+				background: darken(@brand-color-one, 10%);
+				.transition(background 0.6s ease-out);}
+			}
+		}
+	}
+	@media screen and (min-width: 640px) {
+		// Hides toggle icon at large screen size
+		.toggle-icon {
+			display: none;
+		}
+		.navbar {
+			padding: 0 5px;
+			.right;
+			display: block;
+			li {
+			display: inline-block;
+				padding: 10px 5px;
+				border: none;
+				a {
+					background: none;
+					display: inline-block;
+					&:hover {
+						color: @brand-color-one;
+						background: none;
+					}
+				}
+
+			}
+		}
+	}
+}

@@ -1,0 +1,405 @@
+
+/* ---------------------------------------------------------
+Mixins: vendor prefixes
+------------------------------------------------------------ */
+
+/* ---------------------------------------------------------
+Background images
+
+Quick way to import images and cover the background
+------------------------------------------------------------ */
+
+.background-cover(@cover) {
+  -webkit-background-size: @cover;
+  -moz-background-size: @cover;
+  -o-background-size: @cover;
+  background-size: @cover;
+}
+
+/* ---------------------------------------------------------
+Typography Mixins
+------------------------------------------------------------ */
+
+/* Font Rem & Px Cal Mixin */
+.font-size(@font-size: 16){
+    @rem: (@font-size / 10);
+    font-size: @font-size * 1px;
+    font-size: ~"@{rem}rem";
+}
+
+/* Text Shadow */
+.text-shadow (@string: 0 1px 3px rgba(0,0,0,0.004)) {
+  text-shadow: @string;
+}
+
+/* Text-decoration hidden */
+.hide-link-underline {
+  text-decoration: none;
+}
+
+/* Align text center */
+.text-center {
+  text-align: center;
+}
+
+/* Antialiased */
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  .text-shadow( 0 0 0 0 004);
+}
+
+/* Text overflow */
+// Requires inline-block or block for proper styling
+.text-truncate() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ---------------------------------------------------------
+Shadows
+------------------------------------------------------------ */
+
+.drop-shadow(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1) {
+  -webkit-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+  -moz-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+  box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
+  filter:
+    progid:DXImageTransform.Microsoft.Shadow(color=#010101,direction=180,strength=4),
+    progid:DXImageTransform.Microsoft.Shadow(color=#010101,direction=225,strength=4),
+    progid:DXImageTransform.Microsoft.Shadow(color=#010101,direction=270,strength=5);
+}
+
+.inner-shadow(@horizontal:0, @vertical:1px, @blur:2px, @alpha: 0.4) {
+  -webkit-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+  -moz-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+  box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
+}
+
+.box-shadow(@arguments) {
+  -webkit-box-shadow: @arguments;
+  -moz-box-shadow: @arguments;
+  box-shadow: @arguments;
+}
+
+/* ---------------------------------------------------------
+Borders
+------------------------------------------------------------ */
+
+.rounded(@radius: 2px) {
+  -webkit-border-radius: @radius;
+  -moz-border-radius: @radius;
+  border-radius: @radius;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+.border-radius(@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+  -webkit-border-top-right-radius: @topright;
+  -webkit-border-bottom-right-radius: @bottomright;
+  -webkit-border-bottom-left-radius: @bottomleft;
+  -webkit-border-top-left-radius: @topleft;
+  -moz-border-radius-topright: @topright;
+  -moz-border-radius-bottomright: @bottomright;
+  -moz-border-radius-bottomleft: @bottomleft;
+  -moz-border-radius-topleft: @topleft;
+  border-top-right-radius: @topright;
+  border-bottom-right-radius: @bottomright;
+  border-bottom-left-radius: @bottomleft;
+  border-top-left-radius: @topleft;
+  -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
+}
+
+/* ---------------------------------------------------------
+Amination
+------------------------------------------------------------ */
+
+.animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
+  -webkit-animation: @name @duration @delay @ease;
+  -moz-animation:    @name @duration @delay @ease;
+  -ms-animation:     @name @duration @delay @ease;
+}
+
+.transition-duration(@duration: 0.2s) {
+  -moz-transition-duration: @duration;
+  -webkit-transition-duration: @duration;
+  transition-duration: @duration;
+}
+
+.rotation(@deg:5deg){
+  -webkit-transform: rotate(@deg);
+  -moz-transform: rotate(@deg);
+  transform: rotate(@deg);
+}
+
+.scale(@ratio:1.5){
+  -webkit-transform:scale(@ratio);
+  -moz-transform:scale(@ratio);
+  transform:scale(@ratio);
+}
+
+.transition(@name, @duration:0.2s, @ease:ease-out) {
+  -webkit-transition: @name @duration @ease;
+  -moz-transition: @name @duration @ease;
+  transition: @name @duration @ease;
+}
+
+.translate(@x:0, @y:0) {
+  -moz-transform: translate(@x, @y);
+  -webkit-transform: translate(@x, @y);
+  -o-transform: translate(@x, @y);
+  -ms-transform: translate(@x, @y);
+  transform: translate(@x, @y);
+}
+.translate3d (@x, @y: 0, @z: 0) {
+  -webkit-transform: translate3d(@x, @y, @z);
+  -moz-transform:    translate3d(@x, @y, @z);
+  -ms-transform:     translate3d(@x, @y, @z);
+  -o-transform:      translate3d(@x, @y, @z);
+}
+.perspective (@value: 1000) {
+  -webkit-perspective:  @value;
+  -moz-perspective:   @value;
+  -ms-perspective:  @value;
+  perspective:    @value;
+}
+.transform-origin (@x:center, @y:center) {
+  -webkit-transform-origin: @x @y;
+  -moz-transform-origin:    @x @y;
+  -ms-transform-origin:     @x @y;
+  -o-transform-origin:      @x @y;
+}
+/* Backface visibility
+
+* Prevent browsers from flickering when using CSS 3D transforms.
+* Default value is `visible`, but can be changed to `hidden
+* See git pull https://github.com/dannykeane/bootstrap.git backface-visibility for examples */
+
+.backface-visibility(@visibility){
+  -webkit-backface-visibility: @visibility;
+     -moz-backface-visibility: @visibility;
+          backface-visibility: @visibility;
+}
+
+/* ---------------------------------------------------------
+Gradients
+------------------------------------------------------------ */
+
+
+.gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
+  background: @color;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, @start), color-stop(1, @stop));
+  background: -ms-linear-gradient(bottom, @start, @stop);
+  background: -moz-linear-gradient(center bottom, @start 0%, @stop 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{start}', endColorstr='@{end}'); /* for IE */
+}
+
+.bw-gradient(@color: #F5F5F5, @start: 0, @stop: 255) {
+  background: @color;
+  background: -webkit-gradient(
+    linear, left bottom, left top,
+    color-stop(0, rgb(@start,@start,@start)),
+    color-stop(1, rgb(@stop,@stop,@stop))
+  );
+  background: -ms-linear-gradient(bottom,rgb(@start,@start,@start) 0%,rgb(@start,@start,@start) 100%);
+  background: -moz-linear-gradient(center bottom,rgb(@start,@start,@start) 0%,rgb(@stop,@stop,@stop) 100%);
+}
+
+/* Reset filters for IE
+ Useful for when you want to remove a gradient from an element. */
+.reset-filter() {
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
+}
+
+/* ---------------------------------------------------------
+Columns only css3
+
+For creating newspaper style columns
+------------------------------------------------------------ */
+
+.columns(@colwidth: 250px, @colcount: 0, @colgap: 50px, @columnRuleColor: #EEE, @columnRuleStyle: solid, @columnRuleWidth: 1px) {
+  -moz-column-width: @colwidth;
+  -moz-column-count: @colcount;
+  -moz-column-gap: @colgap;
+  -moz-column-rule-color: @columnRuleColor;
+  -moz-column-rule-style: @columnRuleStyle;
+  -moz-column-rule-width: @columnRuleWidth;
+  -webkit-column-width: @colwidth;
+  -webkit-column-count: @colcount;
+  -webkit-column-gap: @colgap;
+  -webkit-column-rule-color: @columnRuleColor;
+  -webkit-column-rule-style: @columnRuleStyle;
+  -webkit-column-rule-width: @columnRuleWidth;
+  column-width: @colwidth;
+  column-count: @colcount;
+  column-gap: @colgap;
+  column-rule-color: @columnRuleColor;
+  column-rule-style: @columnRuleStyle;
+  column-rule-width: @columnRuleWidth;
+}
+/* ---------------------------------------------------------
+Strech Video Mixins
+
+ * Create a <div class="strech-video"> for a responsive video container
+ * For widescreen, create <div class="strech-video widescreen">
+ * For standard Vimeo embeds, create <div class="strech-video vimeo">
+ * For widescreen Vimeo embeds, create <div class="strech-video widescreen vimeo">
+
+------------------------------------------------------------ */
+
+
+.responsive-video {
+  position: relative;
+  padding-top: 25px;
+  padding-bottom: 67.5%;
+  height: 0;
+  margin-bottom: 16px;
+  overflow: hidden;
+
+  &.widescreen { padding-bottom: 57.25%; }
+  &.vimeo { padding-top: 0; }
+
+  iframe,
+  object,
+  embed,
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.strech-video { .responsive-video; }
+
+
+
+/* ---------------------------------------------------------
+Mixins: utilities
+------------------------------------------------------------ */
+
+/* Clearfix
+*
+* Source: http://nicolasgallagher.com/micro-clearfix-hack/
+*
+* For modern browsers
+* 1. The space content is one way to avoid an Opera bug when the
+*    contenteditable attribute is included anywhere else in the document.
+*    Otherwise it causes space to appear at the top and bottom of elements
+*    that are clearfixed.
+* 2. The use of `table` rather than `block` is only necessary if using
+*    `:before` to contain the top-margins of child elements.
+*/
+
+.clearfix() {
+  *zoom: 1;
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+    // Fixes Opera/contenteditable bug:
+    // http://nicolasgallagher.com/micro-clearfix-hack/#comment-36952
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+/* ---------------------------------------------------------
+Resizing & Positioning
+------------------------------------------------------------ */
+
+/* Box sizing */
+.box-sizing(@type: border-box) {
+  -webkit-box-sizing: @type; // Safari <= 5
+     -moz-box-sizing: @type; // Firefox <= 19
+          box-sizing: @type;
+}
+
+/* Sizing shortcuts */
+.size(@width, @height) {
+  width: @width;
+  height: @height;
+}
+.square(@size) {
+  .size(@size, @size);
+}
+
+/* Resize anything */
+.resizable(@direction) {
+  resize: @direction; // Options: horizontal, vertical, both
+  overflow: auto; // Safari fix
+}
+
+/* Center-align a block level element */
+.center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* For floating Left or Right */
+.left { float: left !important; }
+
+.right { float: right !important; }
+
+/*  Hide stuff */
+.hide {
+  display: none; }
+
+/* Opacity */
+.opacity (@opacity: 0.5) {
+  -webkit-opacity:  @opacity;
+  -moz-opacity:     @opacity;
+        opacity:    @opacity;
+  @opacity-ie: @opacity * 100;
+  filter: ~"alpha(opacity=@{opacity-ie})"; // IE8
+}
+
+/* User select
+
+ For selecting text on the page */
+.user-select(@select) {
+  -webkit-user-select: @select;
+     -moz-user-select: @select;
+      -ms-user-select: @select;
+       -o-user-select: @select;
+          user-select: @select;
+}
+
+/* Placeholder text */
+.placeholder(@color: @input-color-placeholder) {
+  &:-moz-placeholder            { color: @color; } // Firefox 4-18
+  &::-moz-placeholder           { color: @color; } // Firefox 19+
+  &:-ms-input-placeholder       { color: @color; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { color: @color; } // Safari and Chrome
+}
+
+/* Optional hyphenation */
+.hyphens(@mode: auto) {
+  word-wrap: break-word;
+  -webkit-hyphens: @mode;
+     -moz-hyphens: @mode;
+      -ms-hyphens: @mode;
+       -o-hyphens: @mode;
+          hyphens: @mode;
+}
+
+
+/* Retina images
+Retina background-image support with non-retina fall back */
+.retina-image(@file-1x, @file-2x, @width-1x, @height-1x) {
+  background-image: url("@{file-1x}");
+
+  @media
+  only screen and (-webkit-min-device-pixel-ratio: 2),
+  only screen and (   min--moz-device-pixel-ratio: 2),
+  only screen and (     -o-min-device-pixel-ratio: 2/1),
+  only screen and (        min-device-pixel-ratio: 2),
+  only screen and (                min-resolution: 192dpi),
+  only screen and (                min-resolution: 2dppx) {
+    background-image: url("@{file-2x}");
+    background-size: @width-1x @height-1x;
+  }
+}

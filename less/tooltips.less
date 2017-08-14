@@ -1,0 +1,156 @@
+
+/* ----------------------------------------------------
+Tooltips
+---------------------------------------------------- */
+
+/* Top Tool Tip*/
+
+.top-tooltips {
+    position: relative;
+    display: inline;
+    span {
+        position: absolute;
+        width:@tooltip-width;
+        color: @tooltip-color;
+        background: @tooltip-background;
+        height: @tooltip-height;
+        line-height: @tooltip-line-height;
+        .text-center; /* uses text-center mixin*/
+        visibility: hidden;
+        border-radius: 3px;
+    }
+    span:after {
+        content:'';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -8px;
+        width: 0; height: 0;
+        border-top: 8px solid #000000;
+        border-right: 8px solid transparent;
+        border-left: 8px solid transparent;
+    }
+    &:hover span{
+        visibility: visible;
+        opacity:@tooltip-opacity;
+        bottom: 30px;
+        left: 50%;
+        margin-left: -76px;
+        z-index: 999;
+    }
+}
+/* Bottom Tool Tip*/
+
+.bottom-tooltips {
+    position: relative;
+    display: inline;
+    span {
+        position: absolute;
+        width:@tooltip-width;
+        color: @tooltip-color;
+        background: @tooltip-background;
+        height: @tooltip-height;
+        line-height: @tooltip-line-height;
+        .text-center; /* uses text-center mixin*/
+        visibility: hidden;
+        border-radius: 3px;
+    }
+    span:after {
+        content:'';
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -8px;
+        width: 0; height: 0;
+        border-bottom: 8px solid #000000;
+        border-right: 8px solid transparent;
+        border-left: 8px solid transparent;
+    }
+    &:hover span {
+        visibility: visible;
+        opacity:@tooltip-opacity;
+        top: 30px;
+        left: 50%;
+        margin-left: -76px;
+        z-index: 999;
+    }
+}
+
+/*
+Note: Left tooltip causing an issue in mobile view
+*/
+/* Left Tool Tip*/
+.left-tooltips {
+    position: relative;
+    display: inline;
+    span {
+        position: absolute;
+        width:@tooltip-width;
+        color: @tooltip-color;
+        background: @tooltip-background;
+        height: @tooltip-height;
+        line-height: @tooltip-line-height;
+        .text-center; /* uses text-center mixin*/
+        visibility: hidden;
+        border-radius: 3px;
+    }
+    span:after {
+        content:'';
+        position: absolute;
+        top: 50%;
+        left: 100%;
+        margin-top: -8px;
+        width: 0; height: 0;
+        border-left: 8px solid #000000;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+    }
+    &:hover span {
+        visibility: visible;
+        opacity:@tooltip-opacity;
+        right: 100%;
+        top: 50%;
+        margin-top: -20px;
+        margin-right: 10px;
+        z-index: 999;
+    }
+}
+
+
+/* Right Tool Tip*/
+
+.right-tooltips {
+    position: relative;
+    display: inline;
+    span {
+        position: absolute;
+        width:@tooltip-width;
+        color: @tooltip-color;
+        background: @tooltip-background;
+        height: @tooltip-height;
+        line-height: @tooltip-line-height;
+        .text-center; /* uses text-center mixin*/
+        visibility: hidden;
+        border-radius: 3px;
+    }
+    span:after {
+        content:'';
+        position: absolute;
+        top: 50%;
+        right: 100%;
+        margin-top: -8px;
+        width: 0; height: 0;
+        border-right: 8px solid #000000;
+        border-top: 8px solid transparent;
+        border-bottom: 8px solid transparent;
+    }
+    &:hover span {
+        visibility: visible;
+        opacity:@tooltip-opacity;
+        left: 100%;
+        top: 50%;
+        margin-top: -20px;
+        margin-left: 10px;
+        z-index: 999;
+    }
+}

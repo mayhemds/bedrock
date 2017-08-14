@@ -1,0 +1,234 @@
+/* ---------------------------------------------------------
+Variables
+------------------------------------------------------------ */
+
+/* Greyscale */
+@white: 			   darken(#fff, 0%);
+@black-10:             darken(#fff, 10%);
+@black-20:             darken(#fff, 20%);
+@black-30:             darken(#fff, 30%);
+@black-40:             darken(#fff, 40%);
+@black-50:             darken(#fff, 50%);
+@black-60:             darken(#fff, 60%);
+@black-70:             darken(#fff, 70%);
+@black-80:             darken(#fff, 80%);
+@black-90:             darken(#fff, 90%);
+@black: 			darken(#000, 100%);
+
+/* Brand Colors */
+@brand-color-one:       #428bca;
+@brand-color-two:       #FF9D1A;
+
+/* Indication Colors */
+@base-success:         #5cb85c;
+@base-warning:         #f0ad4e;
+@base-danger:          #d9534f;
+@base-info:            #5bc0de;
+
+/* Base */
+@root-font-size: 62.5%; /* No change recommended (62.5% = 10px) */
+@base-text-color: @black-70;
+@base-background-color: @white;
+@base-font-size: 1.6;
+@base-font-weight: 300;
+@base-font-style: normal;
+
+/* Links */
+@link-color:              @brand-color-one; // Link color pulls in the main primary color
+@link-color-hover:        darken(@link-color, 15%);
+@link-color-active: 	  darken(@link-color, 10%); // Active color
+@link-text-decoration:    none; // Text decoration (none|underline)
+
+
+
+/* ---------------------------------------------------------
+Layouts
+------------------------------------------------------------ */
+
+/* Bottom margin for paragraphs, lists, and form elements (rem) */
+@block-margin-bottom: 1.4; //
+
+/* ---------------------------------------------------------
+Typography
+------------------------------------------------------------ */
+
+/* Font-face for injecting your own fonts */
+@font-face {
+	font-family: 'Questrial', @font-family-sans-serif;
+	src: url('../fonts/Querstrial-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+
+@font-face {
+	font-family: 'font-awesome';
+	src: url('../fonts/fontawesome-webfont.eot'); /* IE9 Compat Modes */
+	src: url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			 url('../fonts/fontawesome-webfont.woff') format('woff'), /* Modern Browsers */
+			 url('../fonts/fontawesome-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+			 url('../fonts/fontawesome-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+/* Font Types */
+@custom-font-family: 'Questrial', sans-serif; /* This uses the @font-face type */
+@font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+@font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace;
+@font-family-base:        @font-family-sans-serif;
+
+/* Paragraphs */
+@paragraph-color: @black-50; /* Color */
+@paragraph-font-weight: 300; /* Font weight */
+@paragraph-line-height: 1.4em; /* Line height (em) */
+@paragraph-margin-bottom: 2; /* Bottom margin (rem) */
+
+
+/* Headings */
+@heading-color: @black-80; /* Color */
+@heading-font-family: 'Open Sans Condensed', sans-serif; /* Font family */
+@heading-font-weight: 600; /* Font weight */
+@heading-line-height: 1.4em; /* Line height (em) */
+@heading-margin-bottom: 1; /* Bottom margin (rem) */
+
+
+/* Sub Headings*/
+@sub-heading-color: @black-50; /* Color for subheading class */
+@sub-heading-weight: 600;
+
+
+/* ---------------------------------------------------------
+Images
+------------------------------------------------------------ */
+@image-path: '../img'; /* Background image path */
+@image-margin-bottom: 1.4; /* Bottom margin (rem) */
+@image-margin-side: 1.4; /* Horizontal margin (rem) */
+
+@figure-border-color: @black-20; /* Border color */
+@figure-padding: @block-margin-bottom; /* Padding (rem|px) */
+
+@figcaption-color: @black-70; /* Color */
+@figcaption-font-style: italic; /* Font style */
+
+/* ---------------------------------------------------------
+Horizontal Rule
+------------------------------------------------------------ */
+
+@rule-color: @black-10; /* Color */
+@rule-width: 1px; /* Width (px) */
+@rule-style: solid; /* Style (solid|dotted|dashed) */
+@rule-margin: 2.4; /* Vertical margin (rem) */
+
+/* ---------------------------------------------------------
+Buttons
+------------------------------------------------------------ */
+
+@button-font-family: @custom-font-family; /* Font family */
+@button-font-size: @base-font-size; /* Font size (rem) */
+@button-font-weight: normal; /* Font weight  */
+@button-border-radius: 3px; /* Border radius (px) */
+@button-padding-default: 1rem 1.5rem; /* Vertical padding (rem) */
+@button-padding-medium: 1.5rem 2.5em; /* Horizontal padding (rem) */
+@button-padding-large: 2rem 3em; /* Horizontal padding (rem) */
+@button-margin: 1rem;
+
+@button-color: @white !important; /* Text color */
+@button-background: @black-30; /* Background color */
+@button-hover-background: darken(@button-background, 5%); /* Hover background color */
+@button-active-background: darken(@button-background, 10%); /* Active background color */
+@button-border-color: darken(@button-background, 5%); /* Border color */
+
+@colored-button-color: @white; /* Text color */
+@colored-button-background: #006e89; /* Background color */
+@colored-button-hoverBackground: darken(@colored-button-background, 5%); /* Hover background color */
+@colored-button-activeBackground: darken(@colored-button-background, 10%); /* Active background color */
+@colored-button-border-color: darken(@colored-button-background, 5%); /* Border color */
+
+@disabled-button-color: @black-30; /* Text color */
+@disabled-button-background: @black-10; /* Background color */
+@disabled-button-border-color: darken(@disabled-button-background, 5%); /* Border color */
+@disabled-button-cursor: not-allowed; /* Cursor (default|not-allowed) */
+
+
+/* ---------------------------------------------------------
+Tooltips
+------------------------------------------------------------ */
+@tooltip-width: 14rem; /* is 140px */
+@tooltip-height: 4rem; /* is 40px */
+@tooltip-color: @white;
+@tooltip-line-height: 4rem; /* is 40px */
+@tooltip-opacity: 0.8;
+@tooltip-background: @black;
+
+/* ---------------------------------------------------------
+Accordion
+------------------------------------------------------------ */
+/* accordion title */
+
+@accordion-title-font-size: 1.6rem;
+@accordion-title-bg: @black-10;
+@accordion-title-cursor: pointer;
+@accordion-title-color: @black-60;
+@accordion-title-border: 1px solid @black-20;
+@accordion-title-margin: 5px 0 0 0;
+@accordion-title-padding: 5px 20px;
+
+/* accordion content */
+
+
+
+
+/* ---------------------------------------------------------
+Form
+------------------------------------------------------------ */
+
+/* We use these to style the labels in different ways */
+@form-label-pointer: pointer;
+@form-label-font-size: @base-font-size(16);
+@form-label-font-weight: 500;
+@form-label-line-height: 1.5;
+@form-label-font-color: lightness(#000, 30%);
+@form-label-small-transform: capitalize;
+@form-label-bottom-margin: 0;
+@input-font-family: inherit;
+@input-font-color: rgba(0,0,0,0.75);
+@input-font-size: @base-font-size;
+@input-bg-color: #fff;
+@input-focus-bg-color: lightness(@white, -2%);
+@input-border-color: lightness(@white, -20%);
+@input-focus-border-color: lightness(@white, 40%);
+@input-border-style: solid;
+@input-border-width: 1px;
+/* @input-border-radius: {.rounded()};*/
+@input-disabled-bg: #ddd;
+@input-box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+@input-include-glowing-effect: true;
+
+/* We use these to style the fieldset border and spacing. */
+@fieldset-border-style: solid;
+@fieldset-border-width: 1px;
+@fieldset-border-color: #ddd;
+@fieldset-padding: rem-calc(20);
+@fieldset-margin: rem-calc(18 0);
+
+/* We use these to style the legends when you use them */
+@legend-bg: #fff;
+@legend-font-weight: bold;
+@legend-padding: rem-calc(0 3);
+
+/* We use these to style the prefix and postfix input elements */
+@input-prefix-bg: lightness(@white, 5%);
+@input-prefix-border-color: lightness(@white, -20%);
+@input-prefix-border-size: 1px;
+@input-prefix-border-type: solid;
+@input-prefix-overflow: hidden;
+@input-prefix-font-color: #333;
+@input-prefix-font-color-alt: #fff;
+
+/* We use these to style the error states for inputs and labels */
+@input-error-message-padding: rem-calc(6 4);
+@input-error-message-top: 0;
+@input-error-message-font-size: @base-font-size;
+@input-error-message-font-weight: bold;
+@input-error-message-font-color: #fff;
+@input-error-message-font-color-alt: #333;
+
+/* We use this to style the glowing effect of inputs when focused */
+@glowing-effect-fade-time: 0.45s;
+@glowing-effect-color: @input-focus-border-color;
