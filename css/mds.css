@@ -1,14 +1,22 @@
-/* ---------------------------------------------------------
-Mixins: vendor prefixes
------------------------------------------------------------- */
-/* ---------------------------------------------------------
-Background images
-
-Quick way to import images and cover the background
------------------------------------------------------------- */
-/* ---------------------------------------------------------
-Typography Mixins
------------------------------------------------------------- */
+/* ----- Resizing & Positioning ------ */
+/* Box sizing */
+/* Sizing shortcuts */
+/* Resize anything */
+/* Center-align a block level element */
+/* For floating Left or Right */
+.left {
+  float: left !important;
+}
+.right {
+  float: right !important;
+}
+/*  Hide stuff */
+.hide {
+  display: none;
+}
+/* Opacity */
+/* ---- Background images - Quick way to import images and cover the background ---- */
+/* ---- Typography Mixins ---- */
 /* Font Rem & Px Cal Mixin */
 /* Text Shadow */
 /* Text-decoration hidden */
@@ -26,30 +34,18 @@ Typography Mixins
   text-shadow: 0 0 0 0 4;
 }
 /* Text overflow */
-/* ---------------------------------------------------------
-Shadows
------------------------------------------------------------- */
-/* ---------------------------------------------------------
-Borders
------------------------------------------------------------- */
-/* ---------------------------------------------------------
-Amination
------------------------------------------------------------- */
+/* ---- Shadows ----*/
+/* ----- Borders ----- */
+/* ----- Amination ----- */
 /* Backface visibility
 
 * Prevent browsers from flickering when using CSS 3D transforms.
 * Default value is `visible`, but can be changed to `hidden
 * See git pull https://github.com/dannykeane/bootstrap.git backface-visibility for examples */
-/* ---------------------------------------------------------
-Gradients
------------------------------------------------------------- */
+/* ----- Gradients ------ */
 /* Reset filters for IE
  Useful for when you want to remove a gradient from an element. */
-/* ---------------------------------------------------------
-Columns only css3
-
-For creating newspaper style columns
------------------------------------------------------------- */
+/* ----- Columns only css3 - For creating newspaper style columns ----- */
 /* ---------------------------------------------------------
 Strech Video Mixins
 
@@ -122,25 +118,6 @@ Mixins: utilities
 * 2. The use of `table` rather than `block` is only necessary if using
 *    `:before` to contain the top-margins of child elements.
 */
-/* ---------------------------------------------------------
-Resizing & Positioning
------------------------------------------------------------- */
-/* Box sizing */
-/* Sizing shortcuts */
-/* Resize anything */
-/* Center-align a block level element */
-/* For floating Left or Right */
-.left {
-  float: left !important;
-}
-.right {
-  float: right !important;
-}
-/*  Hide stuff */
-.hide {
-  display: none;
-}
-/* Opacity */
 /* User select
 
  For selecting text on the page */
@@ -148,9 +125,7 @@ Resizing & Positioning
 /* Optional hyphenation */
 /* Retina images
 Retina background-image support with non-retina fall back */
-/* ---------------------------------------------------------
-Variables
------------------------------------------------------------- */
+/* ----Colors ---- */
 /* Greyscale */
 /* Brand Colors */
 /* Indication Colors */
@@ -168,6 +143,11 @@ Typography
 @font-face {
   font-family: 'Questrial', "Helvetica Neue", Helvetica, Arial, sans-serif;
   src: url('../fonts/Querstrial-Regular.ttf') format('truetype');
+  /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: 'OpenSans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+  src: url('../fonts/OpenSans-bold.ttf') format('truetype');
   /* Safari, Android, iOS */
 }
 @font-face {
@@ -1331,12 +1311,18 @@ Form
   font-size: 1.6rem;
   margin: 1rem;
   background: #b3b3b3;
-  color: #ffffff !important;
+  color: #191919;
   border: none;
+  -webkit-border-radius: 0.2em;
+  -moz-border-radius: 0.2em;
+  border-radius: 0.2em;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
 }
 .btn:hover {
   background: #999999;
-  color: #ffffff !important;
+  color: #4d4d4d;
 }
 .btn-default {
   padding: 1rem 1.5rem;
@@ -1366,6 +1352,68 @@ Form
 }
 .btn-brand-two:hover {
   background: #e68400;
+}
+.btn-brand-three {
+  background: #d8d8b2;
+}
+.btn-brand-three:hover {
+  background: #c7c790;
+}
+.btn-danger {
+  background: #d9534f;
+}
+.btn-danger:hover {
+  background: #c9302c;
+}
+.btn-success {
+  background: #5cb85c;
+}
+.btn-success:hover {
+  background: #449d44;
+}
+.btn-warning {
+  background: #f0ad4e;
+}
+.btn-warning:hover {
+  background: #ec971f;
+}
+.btn-info {
+  background: #5bc0de;
+}
+.btn-info:hover {
+  background: #31b0d5;
+}
+.btn-danger-outline {
+  border: 1px solid #d9534f;
+  background: none;
+}
+.btn-danger-outline:hover {
+  border: 1px solid #c9302c;
+  background: none;
+}
+.btn-success-outline {
+  border: 1px solid #5cb85c;
+  background: none;
+}
+.btn-success-outline:hover {
+  border: 1px solid #449d44;
+  background: none;
+}
+.btn-warning-outline {
+  border: 1px solid #f0ad4e;
+  background: none;
+}
+.btn-warning-outline:hover {
+  border: 1px solid #ec971f;
+  background: none;
+}
+.btn-info-outline {
+  border: 1px solid #5bc0de;
+  background: none;
+}
+.btn-info-outline:hover {
+  border: 1px solid #31b0d5;
+  background: none;
 }
 /* ----------------------------------------------------
 Tooltips
@@ -2494,11 +2542,19 @@ Note: need to build set of different images masks
   position: fixed;
   bottom: 2em;
   right: 0px;
+  width: 50px;
+  height: 50px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
   text-decoration: none;
   color: #000000;
   background-color: rgba(235, 235, 235, 0.8);
   font-size: 12px;
-  padding: 1em;
+  padding: 1.4em 1.2em;
   display: none;
 }
 .back-to-top:hover {
@@ -2511,6 +2567,7 @@ html,
 body {
   padding: 0;
   margin: 0;
+  width: 100%;
   height: 100%;
 }
 body {
@@ -2533,14 +2590,14 @@ h4,
 h5,
 h6 {
   color: #333333;
-  font-family: 'Questrial', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   line-height: 1.4em;
   margin-bottom: 1;
 }
 h1 {
-  font-size: 36px;
-  font-size: 3.6rem;
+  font-size: 42px;
+  font-size: 4.2rem;
 }
 @media screen and (max-width: 60em) {
   h1 {
@@ -2550,8 +2607,8 @@ h1 {
 }
 /* h1 set at 36px */
 h2 {
-  font-size: 30px;
-  font-size: 3rem;
+  font-size: 36px;
+  font-size: 3.6rem;
 }
 @media screen and (max-width: 60em) {
   h2 {
@@ -2561,8 +2618,8 @@ h2 {
 }
 /* h2 set at 30px */
 h3 {
-  font-size: 28px;
-  font-size: 2.8rem;
+  font-size: 30px;
+  font-size: 3rem;
 }
 @media screen and (max-width: 60em) {
   h3 {
@@ -2572,8 +2629,8 @@ h3 {
 }
 /* h3 set at 26px */
 h4 {
-  font-size: 22px;
-  font-size: 2.2rem;
+  font-size: 24px;
+  font-size: 2.4rem;
 }
 @media screen and (max-width: 60em) {
   h4 {
@@ -2606,7 +2663,7 @@ h6 {
 /* h6 set at 16px */
 .sub-heading {
   color: #808080;
-  font-weight: 600;
+  font-weight: 300;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-shadow: 0 0 0 0 4;

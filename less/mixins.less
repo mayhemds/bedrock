@@ -1,13 +1,56 @@
+// Mixins: vendor prefixes
+ 
 
-/* ---------------------------------------------------------
-Mixins: vendor prefixes
------------------------------------------------------------- */
+/* ----- Resizing & Positioning ------ */
 
-/* ---------------------------------------------------------
-Background images
+/* Box sizing */
+.box-sizing(@type: border-box) {
+  -webkit-box-sizing: @type; // Safari <= 5
+     -moz-box-sizing: @type; // Firefox <= 19
+          box-sizing: @type;
+}
 
-Quick way to import images and cover the background
------------------------------------------------------------- */
+/* Sizing shortcuts */
+.size(@width, @height) {
+  width: @width;
+  height: @height;
+}
+.square(@size) {
+  .size(@size, @size);
+}
+
+/* Resize anything */
+.resizable(@direction) {
+  resize: @direction; // Options: horizontal, vertical, both
+  overflow: auto; // Safari fix
+}
+
+/* Center-align a block level element */
+.center-block() {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* For floating Left or Right */
+.left { float: left !important; }
+
+.right { float: right !important; }
+
+/*  Hide stuff */
+.hide {
+  display: none; }
+
+/* Opacity */
+.opacity (@opacity: 0.5) {
+  -webkit-opacity:  @opacity;
+  -moz-opacity:     @opacity;
+        opacity:    @opacity;
+  @opacity-ie: @opacity * 100;
+  filter: ~"alpha(opacity=@{opacity-ie})"; // IE8
+}
+
+/* ---- Background images - Quick way to import images and cover the background ---- */
 
 .background-cover(@cover) {
   -webkit-background-size: @cover;
@@ -16,9 +59,7 @@ Quick way to import images and cover the background
   background-size: @cover;
 }
 
-/* ---------------------------------------------------------
-Typography Mixins
------------------------------------------------------------- */
+/* ---- Typography Mixins ---- */
 
 /* Font Rem & Px Cal Mixin */
 .font-size(@font-size: 16){
@@ -57,9 +98,7 @@ Typography Mixins
   white-space: nowrap;
 }
 
-/* ---------------------------------------------------------
-Shadows
------------------------------------------------------------- */
+/* ---- Shadows ----*/
 
 .drop-shadow(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1) {
   -webkit-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
@@ -83,9 +122,7 @@ Shadows
   box-shadow: @arguments;
 }
 
-/* ---------------------------------------------------------
-Borders
------------------------------------------------------------- */
+/* ----- Borders ----- */
 
 .rounded(@radius: 2px) {
   -webkit-border-radius: @radius;
@@ -109,9 +146,7 @@ Borders
   -moz-background-clip: padding; -webkit-background-clip: padding-box; background-clip: padding-box;
 }
 
-/* ---------------------------------------------------------
-Amination
------------------------------------------------------------- */
+/* ----- Amination ----- */
 
 .animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
   -webkit-animation: @name @duration @delay @ease;
@@ -150,7 +185,7 @@ Amination
   -ms-transform: translate(@x, @y);
   transform: translate(@x, @y);
 }
-.translate3d (@x, @y: 0, @z: 0) {
+.translate3d (@x: 0, @y: 0, @z: 0) {
   -webkit-transform: translate3d(@x, @y, @z);
   -moz-transform:    translate3d(@x, @y, @z);
   -ms-transform:     translate3d(@x, @y, @z);
@@ -180,9 +215,7 @@ Amination
           backface-visibility: @visibility;
 }
 
-/* ---------------------------------------------------------
-Gradients
------------------------------------------------------------- */
+/* ----- Gradients ------ */
 
 
 .gradient(@color: #F5F5F5, @start: #EEE, @stop: #FFF) {
@@ -210,11 +243,7 @@ Gradients
   filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
 }
 
-/* ---------------------------------------------------------
-Columns only css3
-
-For creating newspaper style columns
------------------------------------------------------------- */
+/* ----- Columns only css3 - For creating newspaper style columns ----- */
 
 .columns(@colwidth: 250px, @colcount: 0, @colgap: 50px, @columnRuleColor: #EEE, @columnRuleStyle: solid, @columnRuleWidth: 1px) {
   -moz-column-width: @colwidth;
@@ -306,56 +335,7 @@ Mixins: utilities
   }
 }
 
-/* ---------------------------------------------------------
-Resizing & Positioning
------------------------------------------------------------- */
 
-/* Box sizing */
-.box-sizing(@type: border-box) {
-  -webkit-box-sizing: @type; // Safari <= 5
-     -moz-box-sizing: @type; // Firefox <= 19
-          box-sizing: @type;
-}
-
-/* Sizing shortcuts */
-.size(@width, @height) {
-  width: @width;
-  height: @height;
-}
-.square(@size) {
-  .size(@size, @size);
-}
-
-/* Resize anything */
-.resizable(@direction) {
-  resize: @direction; // Options: horizontal, vertical, both
-  overflow: auto; // Safari fix
-}
-
-/* Center-align a block level element */
-.center-block() {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* For floating Left or Right */
-.left { float: left !important; }
-
-.right { float: right !important; }
-
-/*  Hide stuff */
-.hide {
-  display: none; }
-
-/* Opacity */
-.opacity (@opacity: 0.5) {
-  -webkit-opacity:  @opacity;
-  -moz-opacity:     @opacity;
-        opacity:    @opacity;
-  @opacity-ie: @opacity * 100;
-  filter: ~"alpha(opacity=@{opacity-ie})"; // IE8
-}
 
 /* User select
 

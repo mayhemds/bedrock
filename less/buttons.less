@@ -3,11 +3,13 @@
 	.font-size;
 	margin: @button-margin;
 	background: @black-30;
-	color: @button-color;
+	color: @black-90;
 	border: none;
+	.rounded(0.2em);
 	&:hover {
 	background: darken(@black-30, 10%);
-	color: @button-color;
+	color: @black-70;
+
 	}
 }
 .btn-default {
@@ -38,5 +40,68 @@
 	background: @brand-color-two;
 	&:hover {
 		background: darken(@brand-color-two, 10%)
+	}
+}
+.btn-brand-three {
+	background: @brand-color-three;
+	&:hover {
+		background: darken(@brand-color-three, 10%)
+	}
+}
+.btn-danger {
+	background: @base-danger;
+	&:hover {
+		background: darken(@base-danger, 10%)
+	}
+}
+.btn-success {
+	background: @base-success;
+	&:hover {
+		background: darken(@base-success, 10%)
+	}
+}
+.btn-warning {
+	background: @base-warning;
+	&:hover {
+		background: darken(@base-warning, 10%)
+	}
+}
+.btn-info {
+	background: @base-info;
+	&:hover {
+		background: darken(@base-info, 10%)
+	}
+}
+//outline buttons
+.btn-danger-outline {
+	border: 1px solid @base-danger;
+	background: none;
+	&:hover {
+		border: 1px solid darken(@base-danger, 10%);
+		background: none;
+	}
+}
+.btn-success-outline {
+	border: 1px solid @base-success;
+	background: none;
+	&:hover {
+		border: 1px solid darken(@base-success, 10%);
+		background: none;
+	}
+}
+.btn-warning-outline {
+	border: 1px solid @base-warning;
+	background: none;
+	&:hover {
+		border: 1px solid darken(@base-warning, 10%);
+		background: none;
+	}
+}
+.btn-info-outline {
+	border: 1px solid @base-info;
+	background: none;
+	&:hover {
+		border: 1px solid  darken(@base-info, 10%);
+		background: none;
 	}
 }

@@ -1,12 +1,11 @@
 $(document).ready(function() {
-    $(".navbar").hide();
+    $(".navbar").show();
     $(window).resize(function() {
         if ($(window).width() <= 640) {
             $(".navbar").hide();
-        } else {
-            $(".navbar").show();
         }
     });
+
     $(".toggle-icon").click(function() {
         $(".navbar").slideToggle("slow", function() {
             // Animation complete.

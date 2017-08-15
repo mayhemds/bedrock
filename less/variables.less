@@ -1,6 +1,6 @@
-/* ---------------------------------------------------------
-Variables
------------------------------------------------------------- */
+// Variables
+
+/* ----Colors ---- */
 
 /* Greyscale */
 @white: 			   darken(#fff, 0%);
@@ -18,6 +18,7 @@ Variables
 /* Brand Colors */
 @brand-color-one:       #428bca;
 @brand-color-two:       #FF9D1A;
+@brand-color-three: 	#d8d8b2;
 
 /* Indication Colors */
 @base-success:         #5cb85c;
@@ -57,6 +58,10 @@ Typography
 	font-family: 'Questrial', @font-family-sans-serif;
 	src: url('../fonts/Querstrial-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
+@font-face {
+	font-family: 'OpenSans', @font-family-sans-serif;
+	src: url('../fonts/OpenSans-bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
 
 @font-face {
 	font-family: 'font-awesome';
@@ -82,7 +87,7 @@ Typography
 
 /* Headings */
 @heading-color: @black-80; /* Color */
-@heading-font-family: 'Open Sans Condensed', sans-serif; /* Font family */
+@heading-font-family: 'Open Sans', sans-serif; /* Font family */
 @heading-font-weight: 600; /* Font weight */
 @heading-line-height: 1.4em; /* Line height (em) */
 @heading-margin-bottom: 1; /* Bottom margin (rem) */
@@ -90,8 +95,8 @@ Typography
 
 /* Sub Headings*/
 @sub-heading-color: @black-50; /* Color for subheading class */
-@sub-heading-weight: 600;
-
+@sub-heading-weight: 300;
+@subheading-font-family: 'Open Sans', sans-serif; 
 
 /* ---------------------------------------------------------
 Images
