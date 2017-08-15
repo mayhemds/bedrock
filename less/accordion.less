@@ -7,38 +7,40 @@
 
 .accordion-title {
 	font-size: @accordion-title-font-size;
-	background: @accordion-title-bg;
 	margin: @accordion-title-margin;
 	padding: @accordion-title-padding;
 	border: @accordion-title-border;
 	cursor: @accordion-title-cursor;
 	color: @accordion-title-color;
+	background: ;
+	background: url('../img/closed.png')@white;
+	background-position:  98% 50%;
 	.rounded(3px);
-	.active-title {
+	
+}
+.active-title {
 		-moz-border-radius: 5px 5px 0 0;
 		-webkit-border-radius: 5px 5px 0 0;
 		border-radius: 5px 5px 0 0;
-		background: url('../img/active-header.gif') @brand-color-one;
+		background: url('../img/open.png')@black-10;
 		background-repeat: no-repeat;
-		background-position: right 50%;
+		background-position:  98% 50%;
 		&:hover {
-			background: url('../img/active-header.gif') @brand-color-one;
+			background: url('../img/open.png')@white;
 			background-repeat: no-repeat;
-			background-position: right 50%;
+			background-position:  98% 50%;
 		}
 	}
 	.inactive-title {
-		background: url('../img/inactive-header.gif') #ebebeb;
+		background: url('../img/closed.png')@white;
 		background-repeat: no-repeat;
-		background-position: right 50%;
+		background-position:  98% 50%;
 		&:hover {
-			background: url('../img/inactive-header.gif') #f5f5f5;
+			background: url('../img/closed.png')@black-10;
 			background-repeat: no-repeat;
-			background-position: right 50%;
+			background-position:  98% 50%;
 		}
 	}
-}
-
 .accordion-content {
 	display: none;
 	padding: 20px;

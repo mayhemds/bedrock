@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: @heading-font-weight;
   line-height: @heading-line-height;
   margin-bottom: @heading-margin-bottom;
-
+  .antialiased;
 }
 
 
@@ -71,6 +71,7 @@ h6 {
 p {
   .font-size(18);
   line-height: @paragraph-line-height;
+  .antialiased;
   @media screen and (max-width: 60em) {
     .font-size();
   }

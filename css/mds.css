@@ -1579,12 +1579,14 @@ Note: Left tooltip causing an issue in mobile view
 }
 .accordion-title {
   font-size: 1.6rem;
-  background: #e6e6e6;
-  margin: 5px 0 0 0;
-  padding: 5px 20px;
+  margin: 0.3em 0 0 0;
+  padding: 0.6em 0.5em;
   border: 1px solid #cccccc;
   cursor: pointer;
   color: #666666;
+  background: ;
+  background: url('../img/closed.png') #ffffff;
+  background-position: 98% 50%;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   border-radius: 3px;
@@ -1592,28 +1594,28 @@ Note: Left tooltip causing an issue in mobile view
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
-.accordion-title .active-title {
+.active-title {
   -moz-border-radius: 5px 5px 0 0;
   -webkit-border-radius: 5px 5px 0 0;
   border-radius: 5px 5px 0 0;
-  background: url('../img/active-header.gif') #428bca;
+  background: url('../img/open.png') #e6e6e6;
   background-repeat: no-repeat;
-  background-position: right 50%;
+  background-position: 98% 50%;
 }
-.accordion-title .active-title:hover {
-  background: url('../img/active-header.gif') #428bca;
+.active-title:hover {
+  background: url('../img/open.png') #ffffff;
   background-repeat: no-repeat;
-  background-position: right 50%;
+  background-position: 98% 50%;
 }
-.accordion-title .inactive-title {
-  background: url('../img/inactive-header.gif') #ebebeb;
+.inactive-title {
+  background: url('../img/closed.png') #ffffff;
   background-repeat: no-repeat;
-  background-position: right 50%;
+  background-position: 98% 50%;
 }
-.accordion-title .inactive-title:hover {
-  background: url('../img/inactive-header.gif') #f5f5f5;
+.inactive-title:hover {
+  background: url('../img/closed.png') #e6e6e6;
   background-repeat: no-repeat;
-  background-position: right 50%;
+  background-position: 98% 50%;
 }
 .accordion-content {
   display: none;
@@ -2594,6 +2596,9 @@ h6 {
   font-weight: 600;
   line-height: 1.4em;
   margin-bottom: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 0 0 0 0 4;
 }
 h1 {
   font-size: 42px;
@@ -2672,6 +2677,9 @@ p {
   font-size: 18px;
   font-size: 1.8rem;
   line-height: 1.4em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-shadow: 0 0 0 0 4;
 }
 @media screen and (max-width: 60em) {
   p {
