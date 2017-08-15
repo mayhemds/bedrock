@@ -265,6 +265,9 @@ Form
 }
 .topbar .navbar li {
   border-bottom: 1px solid #3071a9;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: bold;
 }
 .topbar .navbar li a {
   color: #ffffff;
@@ -1595,9 +1598,6 @@ Note: Left tooltip causing an issue in mobile view
   background-clip: padding-box;
 }
 .active-title {
-  -moz-border-radius: 5px 5px 0 0;
-  -webkit-border-radius: 5px 5px 0 0;
-  border-radius: 5px 5px 0 0;
   background: url('../img/open.png') #e6e6e6;
   background-repeat: no-repeat;
   background-position: 98% 50%;
@@ -2539,6 +2539,32 @@ Note: need to build set of different images masks
   opacity: 100;
   filter: alpha(opacity=10000);
   /* Setting a 100% opacity on mouse hover to show the content */
+}
+.image-card {
+  max-width: 30em;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.image-card .card-image {
+  display: block;
+  max-height: 30em;
+  overflow: hidden;
+  border-bottom: 1px solid #ccc;
+}
+.card-title {
+  display: block;
+  text-align: center;
+}
+.card-content {
+  display: block;
+  text-align: center;
 }
 .back-to-top {
   position: fixed;
