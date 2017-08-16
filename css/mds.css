@@ -2552,11 +2552,41 @@ Note: need to build set of different images masks
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
-.image-card .card-image {
+.card-image {
   display: block;
   max-height: 30em;
   overflow: hidden;
   border-bottom: 1px solid #ccc;
+}
+.avatar-card {
+  position: relative;
+  padding-top: 30px;
+  max-width: 30em;
+  display: block;
+  margin: 0 auto;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+.avatar-card .avatar {
+  position: absolute;
+  top: -15%;
+  left: 40%;
+  display: block;
+  height: 80px;
+  width: 80px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  overflow: hidden;
+  border: 1px solid #cccccc;
 }
 .card-title {
   display: block;
