@@ -64,12 +64,16 @@ Typography
 }
 
 @font-face {
-	font-family: 'font-awesome';
-	src: url('../fonts/fontawesome-webfont.eot'); /* IE9 Compat Modes */
-	src: url('../fonts/fontawesome-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-			 url('../fonts/fontawesome-webfont.woff') format('woff'), /* Modern Browsers */
-			 url('../fonts/fontawesome-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
-			 url('../fonts/fontawesome-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+  font-family: 'FontAwesome';
+  src: url('@{fa-font-path}/fontawesome-webfont.eot?v=@{fa-version}');
+  src: url('@{fa-font-path}/fontawesome-webfont.eot?#iefix&v=@{fa-version}') format('embedded-opentype'),
+    url('@{fa-font-path}/fontawesome-webfont.woff2?v=@{fa-version}') format('woff2'),
+    url('@{fa-font-path}/fontawesome-webfont.woff?v=@{fa-version}') format('woff'),
+    url('@{fa-font-path}/fontawesome-webfont.ttf?v=@{fa-version}') format('truetype'),
+    url('@{fa-font-path}/fontawesome-webfont.svg?v=@{fa-version}#fontawesomeregular') format('svg');
+  // src: url('@{fa-font-path}/FontAwesome.otf') format('opentype'); // used when developing fonts
+  font-weight: normal;
+  font-style: normal;
 }
 /* Font Types */
 @custom-font-family: 'Questrial', sans-serif; /* This uses the @font-face type */
