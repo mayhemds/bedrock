@@ -15,7 +15,14 @@
 		border-bottom: 1px solid #ccc;
 	}
 
-
+.card-title {
+	display: block;
+	.text-center;
+}
+.card-content{
+	display: block;
+	.text-center;
+}
 
 
 
@@ -28,19 +35,30 @@
 		position: absolute;
 		top: -15%;
 		left: 40%;
+		.avatar_sm;
+	}
+}
+.avatar_sm {
 		display: block;
 		height: 80px;
 		width: 80px;
 		.rounded(50px);
 		overflow: hidden;
 		border: 1px solid @black-20;
-	}
 }
-.card-title {
+.avatar_md {
 	display: block;
-	.text-center;
+		height: 100px;
+		width: 100px;
+		.rounded(50px);
+		overflow: hidden;
+		border: 1px solid @black-20;
 }
-.card-content{
+.avatar_lrg {
 	display: block;
-	.text-center;
+		height: 150px;
+		width: 150px;
+		.rounded(80px);
+		overflow: hidden;
+		border: 1px solid @black-20;
 }

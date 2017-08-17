@@ -14,6 +14,10 @@
 .hide {
   display: none;
 }
+/* Overflow */
+.overflow {
+  overflow: hidden;
+}
 /* Opacity */
 /* ---- Background images - Quick way to import images and cover the background ---- */
 /* ---- Typography Mixins ---- */
@@ -2540,6 +2544,45 @@ Note: need to build set of different images masks
   filter: alpha(opacity=10000);
   /* Setting a 100% opacity on mouse hover to show the content */
 }
+.avatar_sm {
+  display: block;
+  width: 80px;
+  height: 80px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  overflow: hidden;
+  border: 1px solid #cccccc;
+}
+.avatar_md {
+  display: block;
+  width: 100px;
+  height: 100px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  overflow: hidden;
+  border: 1px solid #cccccc;
+}
+.avatar_lrg {
+  display: block;
+  width: 150px;
+  height: 150px;
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+  border-radius: 80px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  overflow: hidden;
+  border: 1px solid #cccccc;
+}
 .image-card {
   max-width: 30em;
   display: block;
@@ -2557,6 +2600,14 @@ Note: need to build set of different images masks
   max-height: 30em;
   overflow: hidden;
   border-bottom: 1px solid #ccc;
+}
+.card-title {
+  display: block;
+  text-align: center;
+}
+.card-content {
+  display: block;
+  text-align: center;
 }
 .avatar-card {
   position: relative;
@@ -2588,13 +2639,44 @@ Note: need to build set of different images masks
   overflow: hidden;
   border: 1px solid #cccccc;
 }
-.card-title {
+.avatar_sm {
   display: block;
-  text-align: center;
+  height: 80px;
+  width: 80px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  overflow: hidden;
+  border: 1px solid #cccccc;
 }
-.card-content {
+.avatar_md {
   display: block;
-  text-align: center;
+  height: 100px;
+  width: 100px;
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  border-radius: 50px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  overflow: hidden;
+  border: 1px solid #cccccc;
+}
+.avatar_lrg {
+  display: block;
+  height: 150px;
+  width: 150px;
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+  border-radius: 80px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  overflow: hidden;
+  border: 1px solid #cccccc;
 }
 .back-to-top {
   position: fixed;
@@ -2795,5 +2877,13 @@ video {
   color: #ffffff;
   padding: 2px;
   background: DeepSkyBlue;
+}
+.avatar-sizes {
+  display: block;
+  list-style-type: none;
+}
+.avatar-sizes li {
+  display: inline-block;
+  padding: 0 20px;
 }
 /*# sourceMappingURL=mds.css.map */
