@@ -67,7 +67,7 @@
 }
 
 
- .service-box {
+ .flip-card {
   width: 100%;
   min-height: 300px;
   margin: 20px 0;
@@ -77,17 +77,17 @@
   .transition(all, 0.3s, ease-out);
   &:hover {
   	border-color: #cc3636;
-  	.service-icon-box {
+  	.flip-icon-card {
 	  top: -30px;
 	}
-	.service-heading {
-	  top: -10px;
+	.flip-card-heading {
+	  top: -20px;
 	}
-	.service-description {
+	.flip-card-description {
 	  opacity: 1;
 	  .scale(1);
 	}
-	.service-button {
+	.flip-card-button {
 	  position: relative;
 	  padding: 10px 15px;
 	  background: @brand-color-one;
@@ -98,30 +98,30 @@
 	  .transition(all, 0.3s, ease-In);
 	}
   }
-  	.service-icon-box {
+  	.flip-icon-card {
 	  position: relative;
 	  top: 30px;
 	  display: inline-block;
 	  padding: 10px;
 	  background: white;
 	  .transition( all, 0.3s, ease);
-	  img.service-icon {
+	  img.flip-icon {
 		  width: 40px;
 		}
 	}
-	.service-heading {
+	.flip-card-heading {
 	  position: relative;
-	  	top: 0px;
+	  	top: 20px;
 	  .transition (all, 600ms, cubic-bezier(0.68, -0.55, 0.265, 1.55));
 	}
-	.service-description {
+	.flip-card-description {
 	  padding: 0 10px;
 	  margin: 0 auto;
 	  opacity: 0;
 	  .transition (all, 600ms, cubic-bezier(0.68, -0.55, 0.265, 1.55));
 	  .scale(0);
 	}
-	.service-button {
+	.flip-card-button {
 	  color: white;
 	}
 }

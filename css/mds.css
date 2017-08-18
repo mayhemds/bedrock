@@ -2631,7 +2631,7 @@ Note: need to build set of different images masks
 .social-card .share .fa:hover {
   color: #F17E6F;
 }
-.service-box {
+.flip-card {
   width: 100%;
   min-height: 300px;
   margin: 20px 0;
@@ -2640,21 +2640,21 @@ Note: need to build set of different images masks
   box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2);
   transition: all 0.3s ease-out;
 }
-.service-box:hover {
+.flip-card:hover {
   border-color: #cc3636;
 }
-.service-box:hover .service-icon-box {
+.flip-card:hover .flip-icon-card {
   top: -30px;
 }
-.service-box:hover .service-heading {
-  top: -10px;
+.flip-card:hover .flip-card-heading {
+  top: -20px;
 }
-.service-box:hover .service-description {
+.flip-card:hover .flip-card-description {
   opacity: 1;
   -webkit-transform: scale(1);
   transform: scale(1);
 }
-.service-box:hover .service-button {
+.flip-card:hover .flip-card-button {
   position: relative;
   padding: 10px 15px;
   background: #428bca;
@@ -2664,7 +2664,7 @@ Note: need to build set of different images masks
   bottom: 20%;
   transition: all 0.3s ease-In;
 }
-.service-box .service-icon-box {
+.flip-card .flip-icon-card {
   position: relative;
   top: 30px;
   display: inline-block;
@@ -2672,15 +2672,15 @@ Note: need to build set of different images masks
   background: white;
   transition: all 0.3s ease;
 }
-.service-box .service-icon-box img.service-icon {
+.flip-card .flip-icon-card img.flip-icon {
   width: 40px;
 }
-.service-box .service-heading {
+.flip-card .flip-card-heading {
   position: relative;
-  top: 0px;
+  top: 20px;
   transition: all 600ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
-.service-box .service-description {
+.flip-card .flip-card-description {
   padding: 0 10px;
   margin: 0 auto;
   opacity: 0;
@@ -2688,7 +2688,7 @@ Note: need to build set of different images masks
   -webkit-transform: scale(0);
   transform: scale(0);
 }
-.service-box .service-button {
+.flip-card .flip-card-button {
   color: white;
 }
 .back-to-top {
