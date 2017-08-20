@@ -1,14 +1,12 @@
 $(document).ready(function() {
-    $(".navbar").show();
     $(window).resize(function() {
-        if ($(window).width() <= 640) {
-            $(".navbar").hide();
-        }
+        if ($(window).width() >= 640) {
+            $(".navbar").show();
+        } 
     });
 
     $(".toggle-icon").click(function() {
         $(".navbar").slideToggle("slow", function() {
-            // Animation complete.
         });
     }); // End of Menu
 

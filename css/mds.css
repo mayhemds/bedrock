@@ -128,17 +128,8 @@ Mixins: utilities
 /* Optional hyphenation */
 /* Retina images
 Retina background-image support with non-retina fall back */
-/* ----Colors ---- */
-/* Greyscale */
-/* Brand Colors */
-/* Indication Colors */
 /* Base */
 /* No change recommended (62.5% = 10px) */
-/* Links */
-/* ---------------------------------------------------------
-Layouts
------------------------------------------------------------- */
-/* Bottom margin for paragraphs, lists, and form elements (rem) */
 /* ---------------------------------------------------------
 Typography
 ------------------------------------------------------------ */
@@ -172,9 +163,17 @@ Typography
 /* Font family */
 /* Font weight */
 /* Line height (em) */
-/* Bottom margin (rem) */
 /* Sub Headings*/
 /* Color for subheading class */
+/* ----Colors ---- */
+/* Greyscale */
+/* Brand Colors */
+/* Indication Colors */
+/* Links */
+/* ---------------------------------------------------------
+Layouts
+------------------------------------------------------------ */
+/* Bottom margin for paragraphs, lists, and form elements (rem) */
 /* ---------------------------------------------------------
 Images
 ------------------------------------------------------------ */
@@ -264,7 +263,9 @@ Form
   cursor: pointer;
 }
 .topbar .navbar {
+  display: none;
   list-style: none;
+  max-width: 640px;
 }
 .topbar .navbar li {
   border-bottom: 1px solid #3071a9;
@@ -5065,14 +5066,13 @@ h6 {
   color: #333333;
   font-family: 'Open Sans', sans-serif;
   font-weight: 600;
-  line-height: 1.4em;
-  margin-bottom: 1;
+  line-height: 1.2;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 h1 {
-  font-size: 42px;
-  font-size: 4.2rem;
+  font-size: 36px;
+  font-size: 3.6rem;
 }
 @media screen and (max-width: 60em) {
   h1 {
@@ -5082,8 +5082,8 @@ h1 {
 }
 /* h1 set at 36px */
 h2 {
-  font-size: 36px;
-  font-size: 3.6rem;
+  font-size: 30px;
+  font-size: 3rem;
 }
 @media screen and (max-width: 60em) {
   h2 {
@@ -5093,8 +5093,8 @@ h2 {
 }
 /* h2 set at 30px */
 h3 {
-  font-size: 30px;
-  font-size: 3rem;
+  font-size: 26px;
+  font-size: 2.6rem;
 }
 @media screen and (max-width: 60em) {
   h3 {
@@ -5104,8 +5104,8 @@ h3 {
 }
 /* h3 set at 26px */
 h4 {
-  font-size: 24px;
-  font-size: 2.4rem;
+  font-size: 22px;
+  font-size: 2.2rem;
 }
 @media screen and (max-width: 60em) {
   h4 {

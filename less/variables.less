@@ -1,66 +1,28 @@
 // Variables
 
-/* ----Colors ---- */
 
-/* Greyscale */
-@white: 			   darken(#fff, 0%);
-@black-10:             darken(#fff, 10%);
-@black-20:             darken(#fff, 20%);
-@black-30:             darken(#fff, 30%);
-@black-40:             darken(#fff, 40%);
-@black-50:             darken(#fff, 50%);
-@black-60:             darken(#fff, 60%);
-@black-70:             darken(#fff, 70%);
-@black-80:             darken(#fff, 80%);
-@black-90:             darken(#fff, 90%);
-@black: 			darken(#000, 100%);
-
-/* Brand Colors */
-@brand-color-one:       #428bca;
-@brand-color-two:       #FF9D1A;
-@brand-color-three: 	#d8d8b2;
-
-/* Indication Colors */
-@base-success:         #5cb85c;
-@base-warning:         #f0ad4e;
-@base-danger:          #d9534f;
-@base-info:            #5bc0de;
 
 /* Base */
 @root-font-size: 62.5%; /* No change recommended (62.5% = 10px) */
 @base-text-color: @black-70;
 @base-background-color: @white;
-@base-font-size: 1.6;
+@base-font-size: 1.6rem;
 @base-font-weight: 300;
 @base-font-style: normal;
-
-/* Links */
-@link-color:              @brand-color-one; // Link color pulls in the main primary color
-@link-color-hover:        darken(@link-color, 15%);
-@link-color-active: 	  darken(@link-color, 10%); // Active color
-@link-text-decoration:    none; // Text decoration (none|underline)
-
-
-
-/* ---------------------------------------------------------
-Layouts
------------------------------------------------------------- */
-
-/* Bottom margin for paragraphs, lists, and form elements (rem) */
-@block-margin-bottom: 1.4; //
 
 /* ---------------------------------------------------------
 Typography
 ------------------------------------------------------------ */
 
+
 /* Font-face for injecting your own fonts */
 @font-face {
-	font-family: 'Questrial', @font-family-sans-serif;
-	src: url('../fonts/Querstrial-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-family: 'Questrial', @font-family-sans-serif;
+  src: url('../fonts/Querstrial-Regular.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
 @font-face {
-	font-family: 'OpenSans', @font-family-sans-serif;
-	src: url('../fonts/OpenSans-bold.ttf')  format('truetype'); /* Safari, Android, iOS */
+  font-family: 'OpenSans', @font-family-sans-serif;
+  src: url('../fonts/OpenSans-bold.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
 
 @font-face {
@@ -93,14 +55,58 @@ Typography
 @heading-color: @black-80; /* Color */
 @heading-font-family: 'Open Sans', sans-serif; /* Font family */
 @heading-font-weight: 600; /* Font weight */
-@heading-line-height: 1.4em; /* Line height (em) */
-@heading-margin-bottom: 1; /* Bottom margin (rem) */
+@heading-line-height: 1.2; /* Line height (em) */
+//@heading-margin-bottom: 1; /* Bottom margin (rem) */
 
 
 /* Sub Headings*/
 @sub-heading-color: @black-50; /* Color for subheading class */
 @sub-heading-weight: 300;
 @subheading-font-family: 'Open Sans', sans-serif; 
+
+
+/* ----Colors ---- */
+
+/* Greyscale */
+@white:          darken(#fff, 0%);
+@black-10:             darken(#fff, 10%);
+@black-20:             darken(#fff, 20%);
+@black-30:             darken(#fff, 30%);
+@black-40:             darken(#fff, 40%);
+@black-50:             darken(#fff, 50%);
+@black-60:             darken(#fff, 60%);
+@black-70:             darken(#fff, 70%);
+@black-80:             darken(#fff, 80%);
+@black-90:             darken(#fff, 90%);
+@black:       darken(#000, 100%);
+
+/* Brand Colors */
+@brand-color-one:       #428bca;
+@brand-color-two:       #FF9D1A;
+@brand-color-three:   #d8d8b2;
+
+/* Indication Colors */
+@base-success:         #5cb85c;
+@base-warning:         #f0ad4e;
+@base-danger:          #d9534f;
+@base-info:            #5bc0de;
+
+/* Links */
+@link-color:              @brand-color-one; // Link color pulls in the main primary color
+@link-color-hover:        darken(@link-color, 15%);
+@link-color-active: 	  darken(@link-color, 10%); // Active color
+@link-text-decoration:    none; // Text decoration (none|underline)
+
+
+
+/* ---------------------------------------------------------
+Layouts
+------------------------------------------------------------ */
+
+/* Bottom margin for paragraphs, lists, and form elements (rem) */
+@block-margin-bottom: 1.4; //
+
+
 
 /* ---------------------------------------------------------
 Images
